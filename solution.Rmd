@@ -1,7 +1,9 @@
 ---
 title: 'hw02: PWT'
-author: 'Your Name^[Affiliation]'
-date: '`r format(Sys.time(), "%d %B, %Y")`'
+author: |
+  | Your Name
+  | Affiliation
+date: '`r format(Sys.time(), "%Y/%m/%d")`'
 output:
   bookdown::pdf_document2:
     fig_caption: yes
@@ -18,7 +20,9 @@ documentclass: scrartcl
 
 # Setup
 
-```{r setup}
+```{r setup, message=FALSE}
+library(tidyverse)
+
 pwt <- haven::read_dta("~/Data/pwt90.dta")
 
 countries <- c("United States", "United Kingdom", "Germany", "France", 
