@@ -24,7 +24,7 @@ pwt_dst <- file.path(data_dir, basename(pwt_src))
 if (file.exists(pwt_dst)) {
   message(pwt_dst, " already exists.\n")
 } else {
-  download.file(url = pwt_src, destfile = pwt_dst) 
+  download.file(url = pwt_src, destfile = pwt_dst, mode = "wb") 
 }
 
 message("To load the file, run\n\n", 
